@@ -1,14 +1,8 @@
 var mhsApp = angular.module('mhsApp', [
-    'ngRoute',
-    'mhsMainCtrl'
+    'ngRoute'
 ])
 
 mhsApp.controller('mhsMainCtrl', function ($scope) {
-    $(document).ready( function() {
-        $("#load_home").on("click", function() {
-            $("#content").load("content.html");
-        });
-    });
 
     
 })
@@ -17,19 +11,19 @@ mhsApp.controller('mhsMainCtrl', function ($scope) {
     function($routeProvider, $locationProvider) {
         $routeProvider
         .when('/home', {
-            templateUrl: 'template/home.html',
+            templateUrl: 'home.html',
             //controller: 'mhsMainCtrl'
         })
         .when('/terrain', {
-            templateUrl: 'template/terrain.html',
+            templateUrl: 'terrain.html',
             //controller: 'PhoneDetailCtrl'
         })
         .when('/argumentation', {
-            templateUrl: 'template/argumentation.html',
+            templateUrl: 'argumentation.html',
             //controller: 'PhoneDetailCtrl'
         })
         .otherwise({
             redirectTo: '/home'
         });
-        $locationProvider.html5Mode(true);
+        //$locationProvider.html5Mode(true);
     }]);
