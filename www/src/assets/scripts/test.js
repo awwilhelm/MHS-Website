@@ -1,6 +1,0 @@
-//Javascript
-function test ()
-{
-
-    
-}

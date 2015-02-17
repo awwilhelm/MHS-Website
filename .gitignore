@@ -1,3 +1,5 @@
-bower_components
 node_modules
-www-build
+dist
+.tmp
+.sass-cache
+bower_components
